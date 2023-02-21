@@ -1,0 +1,470 @@
+html {
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    outline: 0;
+  }
+  
+  a {
+    color:inherit;
+    text-decoration: none;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto-Regular'),
+    url('/fonts/Roboto-Regular.woff2') format('woff2'),
+    url('/fonts/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto-Bold'),
+    url('/fonts/Roboto-Bold.woff2') format('woff2'),
+    url('/fonts/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --color-blue:#3F2AFF;
+    --color-white: #fff;
+    --color-darck-blue:#212133;
+    --color-blue-footer:#2E2B44;
+    --color-gray:#666;
+    --color-gray-blue: #85859B;
+    --color-white-blue:#EDF0F9;
+
+
+  }
+
+  body {
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: var(--color-light);
+  }
+
+  .list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+}
+
+  .descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-gray);
+}
+
+  .burger,
+  .close {
+    visibility: hidden;
+    display: block;
+    
+  }
+  
+  .item {
+    outline: auto;
+    display: flex;
+    justify-content: flex-end
+  }
+
+.header {
+    background-color: var(--color-blue) ;
+}
+
+.header__container {
+    padding-top: 27px;
+    padding-bottom: 29px;
+}
+
+.header__content {
+    align-items: center;
+}
+
+
+.header__logo {
+    margin-right: auto;
+    
+}
+
+.nav__link,
+.header__logo {
+    outline: 2px solid transparent;
+  outline-offset: 5px;
+  -webkit-transition-property: color, outline;
+  -o-transition-property: color, outline;
+  transition-property: color, outline;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.nav__link:focus-visible,
+.header__logo:focus-visible {
+    outline: 2px solid var(--color-darck-blue);
+    outline-offset: 5px;
+}
+
+
+.nav__item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--color-white);
+    margin-right: 56px;
+}
+
+.nav__item:last-child {
+    margin-right: 0px;
+}
+
+/** hero **/
+
+
+.hero {
+     background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+}
+
+
+
+.hero__content {
+    padding-top: 131px;
+    
+}
+
+.hero__title {
+    font-size: 60px;
+    line-height: 100%;
+    margin-bottom: 26px;
+    color: var(--color-white);
+}
+
+.hero__descr {
+    font-size: 18px;
+    margin-bottom: 61px;
+    color: var(--color-white);
+}
+
+.link {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--color-white);
+    padding: 24px 76px;
+    border-radius: 20px;
+    background-color:var(--color-blue);
+    cursor: pointer;
+    transition: outline .3s ease-in-out;
+}
+
+.card__link {
+    transition: outline .3s ease-in-out;
+}
+
+.link:focus-visible {
+    outline: 2px solid var(--color-white-blue);
+    outline-offset: 5px;
+}
+
+.card__link:focus-visible {
+    outline: 2px solid var(--color-darck-blue);
+}
+
+.hero__right {
+    padding-top: 15px;
+}
+
+   
+
+
+/**advantages **/
+
+.advantages {
+    padding-top: 80px;
+    padding-bottom: 77px;
+}
+
+.advantages__top {
+    margin-bottom: 23px;
+}
+
+.advantages__title {
+    color: var(--color-blue-footer);
+    margin-bottom: 18px;
+    padding-right: 170px;
+}
+
+.picture__img {
+padding-top: 24px;   
+}
+
+.advantages__bottom {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 12px 0;
+    padding-left: 110px;
+
+}
+
+.advantages__descr {
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.img-1{
+    background-image: url(/img/advan-bottom-1.svg);
+}
+
+.img-2{
+    background-image: url(/img/advan-bottom-2.svg);
+}
+.img-3{
+    background-image: url(/img/advan-bott-3.svg);
+}
+
+
+/** coach **/
+
+
+.coach{
+    background-color: var(--color-darck-blue);
+}
+
+.coach__container{
+    padding-top: 73px;
+    padding-bottom: 74px;
+}
+
+.coach__title {
+    color: var(--color-white);
+    margin-bottom: 24px;
+}
+
+.resume-img {
+    border-radius: 22px 22px 0 0 ;
+    margin-bottom: 26px;
+}
+
+.resume__title {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-white);
+    margin-bottom: 8px;
+}
+
+.resume__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-gray-blue);
+}
+
+
+/** courses **/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    height: 100%;
+    
+}
+
+.card__picture {
+    position: relative;
+    flex-shrink: 0;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0 ;
+}
+
+.courses__card {
+    margin-bottom: 30px;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    background-color: var(--color-white-blue);
+    padding: 30px;   
+    border-radius: 0 0 20px 20px;
+}
+
+.picture {
+    width: 100%;
+    font-size: 0;
+}
+
+.courses-time {
+    position: absolute;
+    align-items: center;
+    top: 10px;
+    right: 2px;
+}
+
+.card__content__descr{
+   flex-direction: column ;
+   justify-content: space-between;
+   align-items: flex-start;
+    padding: 1px 30px;
+    
+}
+
+.time-descr {
+    color: var(--color-white);
+    margin-left: 6px;
+}
+
+.card__title {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-darck-blue);
+    margin-bottom: 6px;
+}
+
+.card__img {
+    width: 100%;
+    font-size: 0;
+}
+
+.card__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-gray);
+    margin-bottom: 23px;
+
+    
+}
+
+.card__link{
+  
+    padding: 19px 59px;
+    font-size: 16px;
+    line-height: 19px;  
+   
+}
+
+.courses__container{
+    padding-top: 74px;
+    padding-bottom: 48px;
+}
+
+.courses__content {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.courses__title {
+    color: var(--color-darck-blue);
+    margin-bottom: 24px;
+}
+
+/**footer **/
+
+
+.footer__top {
+    background-color: var(--color-blue-footer);
+}
+
+.footer__container{
+    padding-top: 28px;
+    padding-bottom: 24px;
+}
+
+.footer__list {
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__item:not(:last-child) {
+    margin-right: 33px;
+}
+
+.footer__bottom {
+    background-color:var(--color-white);
+}
+
+.footer-bottom {
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__copy {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--color-blue-footer);
+}
+
+.footer__link {
+    outline: 2px solid transparent;
+  outline-offset: 5px;
+  -webkit-transition-property: outline;
+  -o-transition-property: outline;
+  transition-property: outline;
+  -webkit-transition-duration: .3s;
+       -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+       -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.footer__link:focus-visible {
+    outline: 2px solid var(--color-white-blue);
+    outline-offset: 5px;
+}
